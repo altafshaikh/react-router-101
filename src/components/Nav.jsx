@@ -1,6 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
+  const navStyle = {
+    color: "white",
+  };
   return (
     <div>
       <nav>
@@ -9,9 +13,26 @@ export default function Nav() {
         </div>
         <div>
           <ul>
-            <li>About us</li>
-            <li>Contatc Us </li>
-            <li>Shop</li>
+            <li>
+              <Link to="/" style={navStyle}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" style={navStyle}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" style={navStyle}>
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/shop" style={navStyle}>
+                Shop
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
