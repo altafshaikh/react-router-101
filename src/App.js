@@ -13,18 +13,10 @@ function App() {
         <header className="App-header">
           <Nav />
           <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/shop">
-              <Shop />
-            </Route>
-            <Route path="/contact">
-              <ContactUs />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
+            <Route path="/" exact component={Home} />
+            <Route path="/shop" component={Shop} />
+            <Route path="/contact" component={ContactUs} />
+            <Route path="/about" component={About} />
           </Switch>
         </header>
       </div>
