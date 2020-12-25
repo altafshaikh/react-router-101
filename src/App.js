@@ -8,15 +8,25 @@ import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Nav />
-        <Home />
-        <Shop />
-        <ContactUs />
-        <About />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Nav />
+          <Route path="/">
+            <Home />
+          </Route>
+          <Route path="/shop">
+            <Shop />
+          </Route>
+          <Route path="/contact">
+            <ContactUs />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </header>
+      </div>
+    </Router>
   );
 }
 
