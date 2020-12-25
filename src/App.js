@@ -12,18 +12,20 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Nav />
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/shop">
-            <Shop />
-          </Route>
-          <Route path="/contact">
-            <ContactUs />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/shop">
+              <Shop />
+            </Route>
+            <Route path="/contact">
+              <ContactUs />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+          </Switch>
         </header>
       </div>
     </Router>
