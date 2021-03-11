@@ -25,9 +25,16 @@ export default class ItemDetail extends Component {
   render() {
     return (
       <div>
-        <h1>item detail</h1>
-        <p>Item Name: {this.state.item.name}</p>
-        <p>Description: {this.state.item.description}</p>
+        {!Object.keys(this.state.item).length ? (
+          <p>Loading</p>
+        ) : (
+          <div>
+            <h1>item detail</h1>
+            <p>Item Name: {this.state.item.name}</p>
+            <p>Description: {this.state.item.description}</p>
+            {/* <p>imag: {this.state.item.images}</p> */}
+          </div>
+        )}
       </div>
     );
   }
